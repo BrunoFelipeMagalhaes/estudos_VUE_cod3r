@@ -1,0 +1,22 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <input type="text" v-on:input="alterarTitulo" />
+  <p>{{titulo}}</p>
+</div>
+
+<script>
+  new Vue({
+    //elemento que eu quero manipular
+    el: "#app",
+    data: {
+      titulo: "Usando VueJS !!",
+    },
+    methods: {
+      alterarTitulo(event) {
+        //usar o this para acessar variáveis dentro da instância do Vue
+        this.titulo = event.target.value;
+      },
+    },
+  });
+</script>
