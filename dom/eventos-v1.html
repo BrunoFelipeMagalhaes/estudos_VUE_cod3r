@@ -1,0 +1,30 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{contador}}</p>
+  <button v-on:click="increment">Somar 1</button>
+  <button v-on:click="decrement">Subtrair 1</button>
+  
+  <hr>
+  
+  <img v-bind:src="gintamaGif"></img>
+</div>
+
+<script>
+  new Vue({
+    //elemento que eu quero manipular #app
+    el: "#app",
+    data: {
+      contador: 0,
+      gintamaGif: "https://media.giphy.com/media/b2uhTQM6xwRR6/giphy.gif",
+    },
+    methods: {
+      increment(event) {
+        return this.contador++;
+      },
+      decrement() {
+        return this.contador--;
+      },
+    },
+  });
+</script>
