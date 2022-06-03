@@ -1,0 +1,53 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{contador}}</p>
+  <button v-on:click="increment(10, $event)">Somar 10</button>
+  <button v-on:click="decrement">Subtrair 1</button>
+  <button v-on:click="changeGif">Mudar Gif</button>
+  
+  <hr>
+
+  <p v-on:mouseover="coordinates">Mouse {{x}} : {{y}} </p>
+  
+  <img v-bind:src="selectedGif" width='100%'></img>
+</div>
+
+<script>
+  new Vue({
+    //elemento que eu quero manipular #app
+    el: "#app",
+    data: {
+      contador: 0,
+      x:0,
+      y:0,
+      selectedGif: "https://media.giphy.com/media/b2uhTQM6xwRR6/giphy.gif",
+      gintamaGif: "https://media.giphy.com/media/b2uhTQM6xwRR6/giphy.gif",
+      gintamaGif2: "https://i.gifer.com/AHyD.gif"
+    },
+    methods: {
+      increment(passo,event) {
+        console.log(event)
+        return this.contador=+passo;
+      },
+      decrement() {
+        return this.contador--;
+      },
+      changeGif(){
+
+        console.log(this.selectedGif === this.gintamaGif)
+        if(this.selectedGif===this.gintamaGif){
+          return this.selectedGif = this.gintamaGif2
+        }
+
+        return this.selectedGif = this.gintamaGif
+      },
+      coordinates(event){
+        console.log(event)
+        this.x = event.screenX,
+        this.y = event.screenY
+      }
+    }, 
+
+  });
+</script>
