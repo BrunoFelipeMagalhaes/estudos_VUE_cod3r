@@ -9,5 +9,5 @@ Atividades realizadas ao longo do curso da Cod3r sobre VueJS
 - [@brunoMagalhaes](https://www.github.com/BrunoFelipeMagalhaes)
 
 
-![Logo](https://media.giphy.com/media/wPyMMQ1NWpmfe/giphy.gif)
+<img src= "https://media.giphy.com/media/wPyMMQ1NWpmfe/giphy.gif" width=100%>
 
